@@ -6,7 +6,7 @@ models:
     columns:
       - name: customer_id
         description: "Primary key."
-        tests:
+        data_tests:
           - unique
           - not_null
       - name: email
@@ -17,23 +17,23 @@ models:
     columns:
       - name: order_id
         description: "Primary key."
-        tests:
+        data_tests:
           - unique
           - not_null
       - name: customer_id
         description: "Foreign key to stg_customers."
-        tests:
+        data_tests:
           - not_null
       - name: order_date
         description: "Order date parsed from the raw text timestamp."
-        tests:
+        data_tests:
           - not_null
       - name: order_status
         description: "Status code as received (1, 2 or 3)."
-        tests:
+        data_tests:
           - accepted_values:
               values: ['1', '2', '3']
       - name: order_amount
         description: "Order amount."
-        tests:
+        data_tests:
           - not_null
