@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: stg_customers
+    description: "Cleaned customers. One row per customer."
+    columns:
+      - name: customer_id
+        description: "Primary key."
+        tests:
+          - unique
+          - not_null
+      - name: email
+        description: "Lowercased email. NULL when the source value was blank."
+
+  - name: stg_orders
+    description: "Cleaned, de-duplicated orders. One row per order."
+    columns:
+      - name: order_id
+        description: "Primary key."
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: "Foreign key to stg_customers."
+        tests:
+          - not_null
+      - name: order_date
+        description: "Order date parsed from the raw text timestamp."
+        tests:
+          - not_null
+      - name: order_status
+        description: "Status code as received (1, 2 or 3)."
+        tests:
+          - accepted_values:
+              values: ['1', '2', '3']
+      - name: order_amount
+        description: "Order amount."
+        tests:
+          - not_null

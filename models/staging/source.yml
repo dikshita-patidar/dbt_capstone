@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: raw_ecommerce
+    description: "Raw e-commerce data loaded from the provided CSV files."
+    database: ecommerce_db
+    schema: raw
+    tables:
+      - name: customers
+      - name: orders
