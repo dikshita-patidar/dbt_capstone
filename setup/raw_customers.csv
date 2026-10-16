@@ -1,0 +1,12 @@
+id,first_name,last_name,email,signup_date
+1,John,Smith,JOHN.smith@gmail.com,2024-01-05
+2,Emma,Johnson,EMMA.johnson@yahoo.com,2024-01-15
+3,Liam,Williams,Liam.williams@gmail.com,2024-02-01
+4,Olivia,Brown,OLIVIA.brown@outlook.com,2024-02-10
+5,Noah,Jones,NOAH.jones@gmail.com,2024-02-20
+6,Ava,Garcia,AVA.garcia@yahoo.com,2024-03-01
+7,William,Miller,william.miller@gmail.com,2024-03-12
+8,Sophia,Davis,sophia.davis@outlook.com,2024-03-18
+9,James,Martinez,james.martinez@gmail.com,2024-04-02
+10,Isabella,Anderson,isabella.anderson@yahoo.com,2024-04-15 
+11,Amal,Gupta,,2024-04-15
