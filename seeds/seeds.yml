@@ -1,0 +1,10 @@
+version: 2
+
+seeds:
+  - name: order_status_codes
+    description: "Mapping from numeric order status codes to readable names."
+    columns:
+      - name: status_code
+        data_tests:
+          - unique
+          - not_null

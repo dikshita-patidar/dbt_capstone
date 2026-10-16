@@ -33,8 +33,17 @@ models:
   dbt_capstone:
     # Config indicated by + and applies to all files under models/example/
      staging:
+      +schema: STAGING
       +materialized: view
      transform:
+      +schema: TRANSFORM
       +materialized: view
      marts:
+      +schema: MARTS
       +materialized: table
+seeds:
+  dbt_capstone:
+    order_status_codes:
+      +column_types:
+        status_code: varchar(10)
+        status_name: varchar(50)

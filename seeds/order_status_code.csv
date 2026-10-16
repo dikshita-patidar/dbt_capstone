@@ -1,0 +1,4 @@
+status_code,status_name
+1,order_success
+2,order_fail
+3,order_return
